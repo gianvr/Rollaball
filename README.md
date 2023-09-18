@@ -1,5 +1,7 @@
 # Rollaball
 
+![Capa do Jogo](img/game.png)
+
 Link itch.io: https://giancarlovr.itch.io/roll-a-ball 
 
 O  objetivo do jogo é coletar o máximo de cubos amarelos até o final do percurso antes que o tempo acabe, sendo 2 minutos e 40 segundos. Caso colete o cubo vermelho o decréscimo da pontuação será da seguinte forma:
