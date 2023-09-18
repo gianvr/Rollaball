@@ -1,4 +1,4 @@
-# Rollaball
+# Roll-a-ball
 
 ![Capa do Jogo](img/game.png)
 
