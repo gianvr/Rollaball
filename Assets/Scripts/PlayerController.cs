@@ -3,16 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
     public float speed = 0;
     public TextMeshProUGUI countText;
-    public GameObject winTextObject;
+    public AudioSource pickUpAudioSource;
+    public AudioSource dontPickUpAudioSource;
+
+
     private Rigidbody rb;
-    private int count;
-    private float movementX;
-    private float movementY;
+    public static int count;
 
     // Start is called before the first frame update
     void Start()
@@ -21,30 +23,43 @@ public class PlayerController : MonoBehaviour
         count = 0;
 
         SetCountText();
-        winTextObject.SetActive(false);
-    }
-
-    void OnMove(InputValue movementValue)
-    {
-        Vector2 movementVector = movementValue.Get<Vector2>();
-        
-        movementX = movementVector.x;
-        movementY = movementVector.y;
     }
 
     void SetCountText()
     {
-        countText.text =  "Count: " + count.ToString();
-        if(count >=10)
+        if(count < 0)
         {
-            winTextObject.SetActive(true);
+            SceneManager.LoadScene("Scenes/Game Over");
+        }else
+        {
+            countText.text =  "Pontos: " + count.ToString();
         }
+        
     }
 
     void FixedUpdate()
     {
-        Vector3 movement = new Vector3(movementX, 0.0f, movementY);
-        rb.AddForce(movement * speed);
+        MovePlayerRelativeToCamera();
+    }
+
+    // Source: https://www.youtube.com/watch?v=7kGCrq1cJew
+    void MovePlayerRelativeToCamera()
+    {
+        float playerVerticalInput = Input.GetAxis("Vertical");
+        float playerHorizontalInput = Input.GetAxis("Horizontal");
+
+        Vector3 forward = Camera.main.transform.forward;
+        Vector3 right = Camera.main.transform.right;
+        forward.y = 0;
+        right.y = 0;
+        forward = forward.normalized;
+        right = right.normalized;
+
+        Vector3 forwardRelativeVerticalInput = playerVerticalInput * forward;
+        Vector3 rightRelativeHorizontalInput = playerHorizontalInput * right;
+
+        Vector3 cameraRelativeMovement = forwardRelativeVerticalInput + rightRelativeHorizontalInput;
+        rb.AddForce(cameraRelativeMovement * speed);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -53,7 +68,28 @@ public class PlayerController : MonoBehaviour
         {
             other.gameObject.SetActive(false);
             count++;
+            pickUpAudioSource.Play();
+            SetCountText();
 
+        }
+        else if(other.gameObject.CompareTag("DontPickUp"))
+        {
+            other.gameObject.SetActive(false);
+            if (count< 5)
+            {
+                count--;
+            }
+            else if (count < 10)
+            {
+                count -= 2;
+            }else
+            {
+                count /= 2;
+            }
+            if (count >= 0)
+            {
+                dontPickUpAudioSource.Play();
+            }
             SetCountText();
         }
     }

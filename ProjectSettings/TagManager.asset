@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - PickUp
+  - CinemachineTarget
+  - DontPickUp
+  - EndGame
   layers:
   - Default
   - TransparentFX
