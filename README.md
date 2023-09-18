@@ -16,6 +16,8 @@ O  objetivo do jogo é coletar o máximo de cubos amarelos até o final do percu
 
   - Irá diminuir os pontos pela metade
 
+Caso a pontuação fique negativa o jogador perde o jogo
+
 ## Assets
 - [Grass And Flowers Pack 1](https://assetstore.unity.com/packages/2d/textures-materials/nature/grass-and-flowers-pack-1-17100?aid=1011ld79j&utm_campaign=unity_affiliate&utm_medium=affiliate&utm_source=partnerize-linkmaker)
 - [Outdoor Ground Textures](https://assetstore.unity.com/packages/2d/textures-materials/floors/outdoor-ground-textures-12555?aid=1011ld79j&utm_campaign=unity_affiliate&utm_medium=affiliate&utm_source=partnerize-linkmaker#content)
