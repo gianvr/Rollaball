@@ -26,8 +26,8 @@ Para mover a esfera basta utilizar as setas direcionais ou as teclas WSAD
 - [Grass And Flowers Pack 1](https://assetstore.unity.com/packages/2d/textures-materials/nature/grass-and-flowers-pack-1-17100?aid=1011ld79j&utm_campaign=unity_affiliate&utm_medium=affiliate&utm_source=partnerize-linkmaker)
 - [Outdoor Ground Textures](https://assetstore.unity.com/packages/2d/textures-materials/floors/outdoor-ground-textures-12555?aid=1011ld79j&utm_campaign=unity_affiliate&utm_medium=affiliate&utm_source=partnerize-linkmaker#content)
 - [Pixabay](https://pixabay.com/pt/sound-effects/search/game/)
-- Art: [Night Cafe](https://creator.nightcafe.studio/)
-- 
+- [Night Cafe](https://creator.nightcafe.studio/)
+
 ## Referências
 - [How to make Terrain in Unity!](https://www.youtube.com/watch?v=MWQv2Bagwgk&t=107s)
 - [Camera-Relative Movement in Unity 3D Explained](https://www.youtube.com/watch?v=7kGCrq1cJew)
