@@ -34,3 +34,4 @@ Para mover a esfera basta utilizar as setas direcionais ou as teclas WSAD
 - [How to Make Beautiful Terrain in Unity 2020 | Beginner Tutorial](https://www.youtube.com/watch?v=ddy12WHqt-M)
 - [How to Create a Simple Countdown Timer in Unity](https://www.youtube.com/watch?v=hxpUk0qiRGs)
 - [Aprenda como criar um MENU PRINCIPAL na Unity de forma Simples e Elegante](https://www.youtube.com/watch?v=yIaAE9bLxXI)
+- [AudioSource na Unity | Colocando uma Música de Fundo no nosso Menu Principal](https://www.youtube.com/watch?v=orMnMpWx3Ns&t=48s)
